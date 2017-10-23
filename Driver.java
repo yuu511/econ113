@@ -138,6 +138,37 @@ class Driver{
 
       }
 
+      void calculateSSRTER (Scanner scan){
+            LRE n = new LRE();
+            System.out.println ("\nNOW LOADING SST ... ");
+            System.out.println ("Input 1st data set\n");
+            String data = scan.nextLine();
+            String[] pieces = data.split ("\\s+");
+            System.out.println("\nYour Arguments:");  
+            for (int i=0; i<pieces.length; i++){
+                  System.out.print (pieces[i]+ " ");
+            }
+            double[] doubledata=new double[pieces.length];
+            for (int i=0;i<pieces.length;i++){
+                  doubledata[i]=Double.parseDouble(pieces[i]);
+            }
+            System.out.println ("\n\nInput 2nd data set seperated by spaces ( of same length to the first)");
+            String data1 = scan.nextLine();
+            String[] pieces1 = data1.split ("\\s+");
+            double[] doubledata1=new double[pieces1.length];
+            for (int i=0;i<pieces1.length;i++){
+                  doubledata1[i]=Double.parseDouble(pieces1[i]);
+            }
+            System.out.println ("\nYour Arguments:");  
+            for (int i=0; i<pieces1.length; i++){
+                  System.out.print (pieces1[i]+ " ");
+            }         
+            n.findSSRTER(doubledata,doubledata1);
+            System.out.println("");
+
+      }
+
+
       public static void main (String[] args){          
             Driver d = new Driver();     
             Scanner scan = new Scanner (System.in);
@@ -147,7 +178,8 @@ class Driver{
                 System.out.println ("Type out the command you wish to use:\n");
                 System.out.println ("MVSC : MEAN VARIANCE STD DEVIATION COVARIANCE PROGRAM\n");
                 System.out.println ("MVSC_SIMPLE : MEAN VARIANCE STD DEVIATION COVARIANCE PROGRAM WITHOUT WORK\n");
-                System.out.println ("LRE\n");
+                System.out.println ("LRE : Finds linear Regression Equation\n");
+                System.out.println ("SSRTER Finds SSR SST SSE and R^2\n");
                 System.out.println ("QUIT (EXIT THE PROGRAM)\n");
                 String data = scan.nextLine();
 
@@ -166,6 +198,13 @@ class Driver{
                  if (data.equals("LRE")){
                   notselected=false;
                   d.calculateLRE(scan);
+                  notselected=true;
+                }
+
+
+                 if (data.equals("SSRTER")){
+                  notselected=false;
+                  d.calculateSSRTER(scan);
                   notselected=true;
                 }
 
