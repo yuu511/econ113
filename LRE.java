@@ -85,7 +85,7 @@ class LRE{
         double Rsquared = SSE/SST;
         System.out.println ("SSE =" + SSE);
         System.out.println ("R^2 = " + Rsquared);
-        System.out.println ("SSR =" + SSR);
+        System.out.println ("SSR = " + SSR);
 	}
 
 
