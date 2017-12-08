@@ -10,6 +10,7 @@ class LRE{
 		double variance = n.findVariance (args1);
 		double covariance = n.findCovariance (args1,args2);
 		slope = covariance / variance;
+		System.out.println("YOUR VARIANCE" + variance);
 		double average1 = n.findAverage(args1);
 		double average2 = n.findAverage(args2);
         intercept = average2 - (slope * average1);
@@ -32,6 +33,7 @@ class LRE{
 		double variance = n.findVariance (args1);
 		double covariance = n.findCovariance (args1,args2);
 		slope = covariance / variance;
+		System.out.print("This is your Variance" + variance);
 		double average1 = n.findAverage(args1);
 		double average2 = n.findAverage(args2);
         intercept = average2 - (slope * average1);
