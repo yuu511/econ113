@@ -84,7 +84,7 @@ class LRE{
 		double SSR = findSSR(args1,args2);
 		double SST = findSST(args2);
         double SSE = SST - SSR;
-        double Rsquared = SSE/SST;
+        double Rsquared = 1-SSE/SST;
         System.out.println ("SSE =" + SSE);
         System.out.println ("R^2 = " + Rsquared);
         System.out.println ("SSR = " + SSR);
