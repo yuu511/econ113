@@ -96,4 +96,3 @@ class LRE{
 
 }
 
-//TODO: Calculate R^2 , predicted - actual
